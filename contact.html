@@ -1,29 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=>, initial-scale=1.0">
+  <title>NLM ENTERTAINMENT</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: rgb(22, 163, 206);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #c60af5;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+      .col-25,
+      .col-75,
+      input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    body {
+    background-color: rgb(253, 253, 253);
+  }
+
+  header {
+    padding: 5px;
+    font-style: italic;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(192, 18, 236)
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+    background-color: rgb(236, 18, 236)
+  }
+
+  a:hover {
+    text-decoration: underline;
+    background-color: rgb(27, 205, 250);
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+  .navbar {
+    overflow: hidden;
+    text-align: right;
+  }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <form action="/action_page.php">
-          <label for="fname">First Name:</label>
+  <header>
+    <h1><img src="image/nlm2.png" height=250px></h1>
+  </header>
+  <nav>
+    <div class="navbar">
+        <a href="index.html" target="_blank">Home</a> |
+        <a href="about.html" target="_blank">About</a>|
+        <a href="contact.html" target="_blank">Contact</a> |
+    </div> 
+</nav> 
+  <h2>Want to contact us?</h2>
+  <p>Have a suggestion on how we can make the stream better? Want to give a Kudos? Have a business inqury? Send us a
+    message.</p>
+
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name:</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="email">Email:</label>
-          <input type="text" id="email">
-      
-          <label for="Message">Message:</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-        </form>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Enter your email:</label>
+        </div>
+        <div class="col-75">
+          <form>
+            <input type="text" id="email" placeholder="Email.
+            ">
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
 </body>
+
 </html>
